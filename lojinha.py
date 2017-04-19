@@ -3,7 +3,6 @@
 import Tkinter
 from Tkinter import *
 import tkMessageBox
-import getch
 
 def main():
 
