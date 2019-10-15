@@ -7,7 +7,7 @@ import tkMessageBox
 def main():
 
 	top = Tkinter.Tk()
-	top.geometry("400x120")
+	top.geometry("400x400")
 
 
 	L1 = Label(top, text="Preço do produto")
@@ -27,7 +27,7 @@ def main():
 	def totalValue():
 		y = sum(preco_produto)
 		tkMessageBox.showinfo( "Valor total da compra", 'Valor total da compra: ' + str(y))
-		L2 = Label(top, text="Valor recebido do cliente para o pagamento:")
+		L2 = Label(top, text="Valor recebido do cliente para o pagamento da compra:")
 		L2.place(x=0, y=60)
 		E2 = Entry(top, bd=1)
 		E2.place(x=250, y=60)
@@ -39,9 +39,9 @@ def main():
 			elif troco < 0:
 				tkMessageBox.showinfo("Troco", 'O valor recebido não corresponde ao valor da compra, cobrar o valor positivo de:' + str(troco))
 			else:
-				tkMessageBox.showinfo("Troco", 'O troco deve ser de:' + str(troco))
+				tkMessageBox.showinfo("Troco", 'O troco deve ser de: R$' + str(troco))
 		def pago_com_cartao():
-			tkMessageBox.showinfo( "Pagamento", 'Usar a maquininha para o pagamentto em cartão')
+			tkMessageBox.showinfo( "Pagamento", 'Usar a maquininha para efetuar o pagamento em cartão')
 
 		d = Button(top, text="Enviar valor recebido", command = valorRecebidoTroco)
 		e = Button(top, text="Pagar no cartão", comman = pago_com_cartao)
